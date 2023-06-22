@@ -8,7 +8,7 @@ app.use(express.json())
 app.use(cors())
 
 // allows you to serve static files
-app.use(express.static())
+app.use(express.static('public'))
 
 // sendFile.join is combining the current directory name with the specified url
 // This is useful because we can serve files to our front end
@@ -25,4 +25,6 @@ app.get('/profile', (req, res) => {
 })
 
 
-app.listen(4000, console.log('Wh- wha? What time is it?'))
+app.listen(4000, 
+    () => console.log(`Wh-Wha? What time is it?`)
+)
